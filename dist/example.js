@@ -1003,7 +1003,27 @@
 	    staticClass: "form-group pull-left"
 	  }, [_c('label', {
 	    staticClass: "control-label pr2"
-	  }, [_vm._v(_vm._s(_vm.translation.table.label_limits))]), _vm._v(" "), _c('select', {
+	  }, [_vm._v(_vm._s(_vm.translation.table.label_limits))]), _vm._v(" "), _c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.perpage),
+	      expression: "perpage"
+	    }],
+	    attrs: {
+	      "number": ""
+	    },
+	    domProps: {
+	      "value": _vm.limit,
+	      "value": (_vm.perpage)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.perpage = $event.target.value
+	      }
+	    }
+	  }), _vm._v(" "), _c('select', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",

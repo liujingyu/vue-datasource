@@ -6,6 +6,7 @@
           <!--limits-->
           <div class="form-group pull-left">
             <label class="control-label pr2">{{ translation.table.label_limits }}</label>
+            <input v-model="perpage" :value="limit" number>
             <select class="form-control" v-model="perpage" number>
               <option v-for="limit in limits" :value="limit">{{ limit }}</option>
             </select>
