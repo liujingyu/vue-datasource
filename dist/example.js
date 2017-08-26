@@ -363,6 +363,10 @@
 	      type: String,
 	      default: 'es'
 	    },
+	    delay: {
+	      type: Number,
+	      default: 200
+	    },
 	
 	    columns: {
 	      type: Array,
@@ -437,11 +441,12 @@
 	    }
 	  },
 	  watch: {
-	    perpage: function perpage() {
+	    perpage: _.debounce(function () {
+	
 	      this.selected = null;
 	      this.indexSelected = -1;
 	      this.$emit('change', { perpage: this.perpage, page: 1 });
-	    },
+	    }, 500),
 	    tableData: function tableData() {
 	      this.selected = null;
 	      this.indexSelected = -1;

@@ -3862,6 +3862,10 @@ uuid@^3.0.0:
   version "3.1.0"
   resolved "http://registry.npm.taobao.org/uuid/download/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
+"v-debounce@https://github.com/vuejs-tips/v-debounce":
+  version "0.0.1"
+  resolved "https://github.com/vuejs-tips/v-debounce#67c31b6cb7a983c96de5c2fb82678221ceebce29"
+
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/validate-npm-package-license/download/validate-npm-package-license-3.0.1.tgz#2804babe712ad3379459acfbe24746ab2c303fbc"

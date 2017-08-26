@@ -109,6 +109,10 @@
         type: String,
         default: 'es'
       },
+      delay: {
+        type: Number,
+        default: 200
+      },
       /**
        * Columns to display
        * @type {Array}
@@ -202,14 +206,15 @@
        * Handle show limit changed.
        * @return {void}
        */
-      perpage() {
-        this.selected = null;
-        this.indexSelected = -1;
-        this.$emit('change', {perpage: this.perpage, page: 1});
-      },
-      tableData() {
-        this.selected = null;
-        this.indexSelected = -1;
+        perpage: _.debounce(function () {
+
+            this.selected = null;
+            this.indexSelected = -1;
+            this.$emit('change', {perpage: this.perpage, page: 1});
+        }, 500),
+        tableData() {
+            this.selected = null;
+            this.indexSelected = -1;
       }
     }
   }
